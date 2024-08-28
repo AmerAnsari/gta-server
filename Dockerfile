@@ -15,7 +15,7 @@ COPY . /app/
 RUN chmod +x ./Server
 
 # Expose the necessary port
-EXPOSE 22000
+EXPOSE 22000/udp
 
 # Start the server
 CMD ["./Server"]

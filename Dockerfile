@@ -6,8 +6,11 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
-# Expose the port that the app will run on
-EXPOSE 22000
+# Ensure the server file has execution permissions
+RUN chmod +x /gtaconnected/Server
 
-# Command to run the application
-RUN Server
+# Expose the necessary port
+EXPOSE 22000/udp
+
+# Start the server
+CMD ["./Server"]

@@ -12,10 +12,10 @@ RUN apt-get update && apt-get install -y \
 COPY . /app/
 
 # Ensure the server file has execution permissions
-RUN chmod +x ./app/Server
+RUN chmod +x ./Server
 
 # Expose the necessary port
 EXPOSE 22000
 
 # Start the server
-CMD ["./app/Server"]
+CMD ["./Server"]

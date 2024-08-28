@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . /app/
 
 # Ensure the server file has execution permissions
-RUN chmod +x /gtaconnected/Server
+RUN chmod +x ./Server
 
 # Expose the necessary port
 EXPOSE 22000/udp
